@@ -89,7 +89,7 @@ include 'config.php';
                         <div class="col-md-6 crown-text">
                             <h2 class="title">Гарантия - залог качества</h2>
                             <p>
-                                При соблюдении рекомендаций по эксплуатации, на данный аккумулятор предоставляется гарантия сроком в <span>3 года</span>.
+                                При соблюдении рекомендаций по эксплуатации, на данный аккумулятор предоставляется гарантия сроком до <span>3-х лет</span>.
                             </p>
                         </div>
                     </div>
@@ -175,24 +175,32 @@ include 'config.php';
 
                 <div class="col">
                     <div class="shadow card bat-card h-100">
-                        <img src="batteries/<?php echo $fetch_product['image']; ?>" class="battery">
+                        <div class="card-image-container">
+                            <img src="batteries/<?php echo $fetch_product['image']; ?>" class="battery">
+                            <img src="flags/<?php echo $fetch_product['flag']; ?>" class="flag">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $fetch_product['name']; ?></h5>
-                            <h6 style="display:inline;">Пусковой ток: </h6> 
-                            <p style="display:inline;"><?php echo $fetch_product['current']; ?>А</p></h5>
-                            <br>
-                            <h6 style="display:inline;">Гарантия: </h6> 
-                            <p style="display:inline;"><?php echo $fetch_product['warranty']; ?></p></h5>
-                            <br>
-                            <h6 style="display:inline ;">Страна: <img src="flags/<?php echo $fetch_product['flag']; ?>" class="flag">
-                            <p style="display:inline;"><?php echo $fetch_product['country']; ?></p></h6>
-                            <br><br>
-					        <label class="fw-light fst-normal" style="color:#e60000;">Цена с учетом старого АКБ</label>
-                            <h5><s><?php echo number_format($fetch_product['total_price'], 0, '.', ' ');?></s> <?php echo number_format($fetch_product['discount_price'], 0, '.', ' '); ?> тенге</h5>
+                            <div class="card-header">
+                                <h5 class="card-title"><?php echo $fetch_product['name']; ?></h5>
+                            </div>
+
+                            <span class="tok-value"><?php echo $fetch_product['current']; ?>А</span>
+
+                            <div class="price-container">
+                                <span class="new-price">
+                                   ₸<?php echo number_format($fetch_product['discount_price'], 0, '.', ' '); ?>
+                                    <span class="old-price">
+                                        <?php echo number_format($fetch_product['total_price'], 0, '.', ' '); ?>
+                                    </span>
+                                </span>
+                            </div>
+
+                            <label class="fw-light fst-normal card-warning">Цена с учетом старого АКБ</label>
+
                         </div>
                         <div class="card-footer bat-card-footer">
                             <a href="battery-buy.php?buy=<?php echo $fetch_product['id']; ?>">
-								<button class="btn bat-button" name="buy">Купить >></button>
+								<button class="btn bat-button card-button" name="buy">Купить >></button>
                             </a>
                         </div>
                     </div>
@@ -209,7 +217,7 @@ include 'config.php';
         <br>
 
         <!-- sales -->
-        <section id="sale" class="mt-5 container">
+        <!-- <section id="sale" class="mt-5 container">
             <h3>Скидки</h3>
 
             <form action="" method="POST">
@@ -246,22 +254,31 @@ include 'config.php';
                 ?>
                 <div class="col">
                     <div class="shadow card bat-card h-100">
-                        <img src="batteries/<?php echo $fetch_product['image']; ?>" class="battery">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $fetch_product['name']; ?></h5>
-                            <h6 style="display:inline;">Пусковой ток: </h6> 
-                            <p style="display:inline;"><?php echo $fetch_product['current']; ?>А</p></h5>
-                            <br>
-                            <h6 style="display:inline;">Гарантия: </h6> 
-                            <p style="display:inline;"><?php echo $fetch_product['warranty']; ?></p></h5>
-                            <br>
-                            <!--flag 1000x667-->
-                            <h6 style="display:inline ;">Страна: <img src="flags/<?php echo $fetch_product['flag']; ?>" style="width: 5%;">
-                            <p style="display:inline;"><?php echo $fetch_product['country']; ?></p></h6>
-                            <br><br>
-                            <h5><s><?php echo number_format($fetch_product['old_price'], 0, '.', ' '); ?></s> 
-								<?php echo number_format($fetch_product['new_price'], 0, '.', ' '); ?> тенге</h5>
-                        </div>
+                            <img src="batteries/<?php echo $fetch_product['image']; ?>" class="battery">
+                            <div class="card-body">
+
+                                <p class="tok">Пусковой ток:  
+                                    <span class="tok-value"><?php echo $fetch_product['current']; ?>
+                                    А</span>
+                                </p> 
+
+                                <p class="guarantee">Гарантия: 
+                                    <span class="tok-value"><?php echo $fetch_product['warranty']; ?>
+                                    А</span>
+                                </p> 
+
+                                <p style="flag">Страна: 
+                                    <img src="flags/<?php echo $fetch_product['flag']; ?>" style="width: 5%;">
+                                    <span style="flag-value"><?php echo $fetch_product['country']; ?></span>
+                                </p>
+
+                                <div class="price-container">
+                                    <span class="old-price"><?php echo number_format($fetch_product['old_price'], 0, '.', ' '); ?></span>
+                                    <span class="new-price">  <?php echo number_format($fetch_product['new_price'], 0, '.', ' '); ?> тенге</span>
+                                </div>
+                            </div>
                         <div class="card-footer bat-card-footer">
 							<button type="button" class="btn bat-button myBtn" name="buy">Купить >></button>
                         </div>
@@ -273,7 +290,7 @@ include 'config.php';
                     };
                 ?>
             </div>
-        </section>
+        </section> -->
         
     </main>
      <!---->
