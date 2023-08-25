@@ -31,7 +31,7 @@ include 'config.php';
 
 
 <body>
-	<script async src="//unisiter.ru/widgets/whatsapp/script.js" uw-phone="77087088800" uw-location="bl"></script>
+	<!-- <script async src="//unisiter.ru/widgets/whatsapp/script.js" uw-phone="77087088800" uw-location="bl"></script> -->
 	
     <header class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -60,8 +60,8 @@ include 'config.php';
         <div id="carouselExampleControls" class="carousel slide bat-slide mt-3 carousel-container" data-bs-ride="carousel">
             <div class="carousel-inner carousel-content">
 				
-				<div class="carousel-item active left-item p-2">
-                    <div class="d-flex row p-5">
+				<div class="carousel-item active left-item p-5">
+                    <div class="d-flex row p-3">
                         <div class="col-md-7 left-content">
                             <h2 class="title" style="color: #111">Выберите <div style="color: #007af8; display: inline;">идеальный</div> аккумулятор</h2>
                             <p class="subtext">вместе с нашими экспертами</p>
@@ -368,12 +368,54 @@ include 'config.php';
     <footer class="text-center mt-5">
         <p>© 2021-2023 Аккумулятор Орталығы, Казахстан. Все права защищены.</p>
     </footer>
+
+    <a href="https://wa.me/1234567890" class="whatsapp-button">
+        <span class="whatsapp-text">Напишите нам</span>
+        <img src="./images/whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+    </a>
+
+    <button id="scrollTopButton" class="scroll-top-button" onclick="scrollToTop(300)">↑</button>
     
+    
+    <script src="js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="../js/modal.js"></script>
 
+    <script>
+    let button = document.getElementById("scrollTopButton");
+
+    window.onscroll = function() { handleScroll() };
+
+    function handleScroll() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            button.classList.add("show");
+        } else {
+            button.classList.remove("show");
+        }
+    }
+
+    function scrollToTop(scrollDuration) {
+        const scrollHeight = window.scrollY,
+            scrollStep = Math.PI / ( scrollDuration / 15 ),
+            cosParameter = scrollHeight / 2;
+        let scrollCount = 0,
+            scrollMargin;
+
+        requestAnimationFrame(step);
+        function step () {
+            setTimeout(function() {
+                if ( window.scrollY !== 0 ) {
+                    requestAnimationFrame(step);
+                    scrollCount = scrollCount + 1;  
+                    scrollMargin = cosParameter - cosParameter * Math.cos( scrollCount * scrollStep );
+                    window.scrollTo( 0, ( scrollHeight - scrollMargin ) );
+                }
+            }, 15 );
+        }
+    }
+</script>
 
     
 </body>
