@@ -14,10 +14,11 @@ body {
 a.logo {
     display: block;
     width: 40px;
-    margin: 0 20px;
+    margin: 0 40px 0 20px;
 }
+
 a.logo img {
-  width: 45px;
+  width: 60px;
   border-radius: 11%;
 }
 
@@ -60,6 +61,13 @@ a.logo img {
 .banner-logo {
   position: relative; 
   bottom: 10px;
+}
+
+.navbar {
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+  border: 1px solid #ccc;
 }
 
 .form {
@@ -131,10 +139,10 @@ a.logo img {
     content: "";
     position: absolute;
     background-color: #000080;
-    height: 3px;
+    height: 2px;
     width: 0;
-    left: 0;
-    bottom: -10px;
+    left: 10px;
+    bottom: -6px;
     transition: 0.3s;
   }
   
@@ -143,7 +151,7 @@ a.logo img {
   }
   
   .navigation:hover:after{
-    width: 100%;
+    width: 84%;
   }
 
   .navigation.active {
@@ -615,4 +623,8 @@ a.logo img {
   background-color: transparent;
   color: rgb(80, 80, 80);
   border: 1px solid rgb(80, 80, 80);;
+}
+
+.btn:hover {
+  background-color: white;
 }

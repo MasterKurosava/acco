@@ -35,8 +35,8 @@ include 'config.php';
 	
     <header class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand logo" style="margin-right: 0 !important;" href="#"><img src="images/logo.png" class="logo" alt=""></a>
+            <div class="container">
+                <a class="navbar-brand logo" href="#"><img src="images/logo.png" class="logo" alt=""></a>
 				<a class="phone text-center" href="tel:+77087088800" target="_blank"><p>+7 708 708 88 00</p></a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,8 +45,8 @@ include 'config.php';
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="navigation active main" aria-current="page" href="https://akk-o.kz/#">Главная</a>
-                        <a class="navigation" href="https://akk-o.kz/#battery">Аккумуляторы</a>
-                        <a class="navigation" href="https://akk-o.kz/#sale">Скидки</a>
+                        <a class="navigation" href="#battery">Аккумуляторы</a>
+                        <a class="navigation" href="#sale">Скидки</a>
                         <a class="navigation" href="https://akk-o.kz/contact/">Контакты</a>
                     </div>
                 </div>
@@ -293,10 +293,9 @@ include 'config.php';
         </section> -->
         
     </main>
-     <!---->
 
     <footer class="text-center mt-5">
-        <p>© 2021-2023 Аккумулятор Орталығы. Астана, Казахстан. Все права защищены.</p>
+        <p>© 2021-2023 Аккумулятор Орталығы, Казахстан. Все права защищены.</p>
     </footer>
     
     <script src="js/bootstrap.min.js"></script>
