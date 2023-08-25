@@ -2,6 +2,6 @@
 
 require "rb.php";
 
-R::setup( 'mysql:host=srv-pleskdb50.ps.kz:3306;dbname=akkokz_battery', 'akkokz_esiko', 'Esiko2005#' );
+R::setup( 'mysql:host=localhost:3306;dbname=acco', 'root', '1112' );
 
 session_start();

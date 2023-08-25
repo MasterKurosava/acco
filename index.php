@@ -35,8 +35,8 @@ include 'config.php';
 	
     <header class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand logo" style="margin-right: 0 !important;" href="#"><img src="images/logo.png" class="logo" alt=""></a>
+            <div class="container">
+                <a class="navbar-brand logo" href="#"><img src="images/logo.png" class="logo" alt=""></a>
 				<a class="phone text-center" href="tel:+77087088800" target="_blank"><p>+7 708 708 88 00</p></a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,8 +45,8 @@ include 'config.php';
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <a class="navigation active main" aria-current="page" href="https://akk-o.kz/#">Главная</a>
-                        <a class="navigation" href="https://akk-o.kz/#battery">Аккумуляторы</a>
-                        <a class="navigation" href="https://akk-o.kz/#sale">Скидки</a>
+                        <a class="navigation" href="#battery">Аккумуляторы</a>
+                        <a class="navigation" href="#sale">Скидки</a>
                         <a class="navigation" href="https://akk-o.kz/contact/">Контакты</a>
                     </div>
                 </div>
@@ -63,11 +63,11 @@ include 'config.php';
 				<div class="carousel-item active left-item p-2">
                     <div class="d-flex row p-5">
                         <div class="col-md-7 left-content">
-                            <h2 class="title">Выберите <span>идеальный</span> аккумулятор</h2>
-                            <p class="subtext">вместе с нами экспертами</p>
+                            <h2 class="title" style="color: #111">Выберите <div style="color: #007af8; display: inline;">идеальный</div> аккумулятор</h2>
+                            <p class="subtext">вместе с нашими экспертами</p>
                         </div>
                         <div class="col-md-5 carousel-form">
-                            <form action="form.php" method="post" class="form">
+                            <form action="form.php" method="post" class="form" style=" border: 3px solid #007af8;">
                                 <div class="input-container">
                                     <input type="text" name="name" class="input w-100" placeholder="ФИО" required/>
                                 </div>
@@ -103,8 +103,10 @@ include 'config.php';
                         </div>
                         <div class="col-md-7 orta-text">
                             <h2 class="title">Аккумулятор орталығы</h1>
-                            <p>
-                            Аккумуляторный центр "Астана" предлагает автомобильные масла и маслянные фильтры. Мы гарантируем быструю доставку, выезд, зарядку, проверку плотности и установку аккумуляторов с качественным сервисом.
+                            <p style="max-width: 600px">
+                            Аккумуляторный центр "Астана" предлагает автомобильные масла и маслянные фильтры. 
+                            Мы гарантируем быструю доставку, выезд, зарядку, проверку плотности и установку 
+                            аккумуляторов с качественным сервисом.
                             </p>
                         </div>
                     </div>
@@ -123,10 +125,6 @@ include 'config.php';
 		
 		<div class="text-center mt-3">
             <img src="images/ad.jpg" style="width: 100%; border-radius: 20px;">
-        </div>
-		
-		<div class="text-center mt-3">
-            <img src="images/prepare.png" style="width: 100%; border-radius: 15px;">
         </div>
 		
     </header>
@@ -302,7 +300,6 @@ include 'config.php';
         </section> -->
         
     </main>
-     <!---->
 
 
 <!-- Modal -->
@@ -369,7 +366,7 @@ include 'config.php';
 
 
     <footer class="text-center mt-5">
-        <p>© 2021-2023 Аккумулятор Орталығы. Астана, Казахстан. Все права защищены.</p>
+        <p>© 2021-2023 Аккумулятор Орталығы, Казахстан. Все права защищены.</p>
     </footer>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

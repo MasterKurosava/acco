@@ -117,7 +117,7 @@ include '../config.php';
           </form>
             
           <p>&nbsp &nbsp &nbsp &nbsp &nbspМы всегда готовы ответить на все <br>&nbsp &nbsp &nbsp &nbsp &nbspваши вопросы</p>
-            <div>
+            <div style="padding-bottom: 30px;">
             &nbsp &nbsp &nbsp &nbsp&nbsp
               <a href="https://wa.me/77087088800" target="_blank" class="links">
               <img src="../images/whatsapp.svg" class="icon"/>
@@ -127,6 +127,45 @@ include '../config.php';
               </a>
             </div>
 
+        </div>
+        <div class="contact-form">
+          <a class="dg-widget-link" href="http://2gis.kz/nur_sultan/profiles/70000001018078968,70000001078282817,70000001078282846,70000001037721619/center/71.44821166992189,51.16642774275137/zoom/12?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">
+              Посмотреть на карте Астаны
+          </a>
+          
+          <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+          <script charset="utf-8">
+              new DGWidgetLoader({
+                  "width": "100%",
+                  "height": 487,
+                  "borderColor": "#a3a3a3",
+                  "pos": {
+                      "lat": 51.16, 
+                      "lon": 71.434427,
+                      "zoom": 12
+                  },
+                  "opt": {
+                      "city":"nur_sultan"
+                  },
+                  "org":[
+                      {
+                          "id":"70000001018078968"
+                      },
+                      {
+                          "id":"70000001078282817"
+                      },
+                      {
+                          "id":"70000001078282846"
+                      },
+                      {
+                          "id":"70000001037721619"
+                      }
+                  ]
+              });
+          </script>
+          <noscript style="color:#c00;font-size:16px;font-weight:bold;">
+              Виджет карты использует JavaScript. Включите его в настройках вашего браузера.
+          </noscript>
         </div>
       </div>
     </div>

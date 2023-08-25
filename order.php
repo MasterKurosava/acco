@@ -7,7 +7,8 @@ $chat_id = "-1001742607911";
 
 if (isset($_POST['order']))
 {
-    $date = new DateTime();
+    $timezone = new DateTimeZone('Etc/GMT-6');
+    $date = new DateTime('now', $timezone);
 
     $name = mysqli_real_escape_string($con, $_POST['name']);
     $phone = mysqli_real_escape_string($con, $_POST['phone']);
@@ -16,27 +17,37 @@ if (isset($_POST['order']))
     $delivery = mysqli_real_escape_string($con, $_POST['delivery']);
     $method = mysqli_real_escape_string($con, $_POST['method']);
 
-    $txt = "Заявка от <b>" . $date->format('d.m.Y, H:i:s') . "</b><br>" .
-           "Имя: <b>$name</b><br>" .
-           "Телефон: <a href='tel:$phone'>$phone</a><br><br>";
+    $txt = "📢 Заявка от *{$date->format('d.m.Y, H:i:s')}* — " .
+           "🔹 Имя: *$name* — " .
+           "📞 Телефон: [$phone](tel:$phone) ";
 
     if (!empty($battery)) {
-        $txt .= "Аккумулятор: <b>$battery</b><br>";
+        $txt .= "— 🔋 Аккумулятор: *$battery* ";
     }
+
+    if ($payment == "cash") $payment = "Наличными";
+    else if ($payment == "kaspi") $payment = "Переводом";
+    else $payment = "Картой";
 
     if (!empty($payment)) {
-        $txt .= "Оплата: <b>$payment</b><br>";
+        $txt .= "— 💳 Оплата: *$payment* ";
     }
+
+    if ($delivery == "delivery") $delivery = "Да";
+    else $delivery = "Самовывоз";
 
     if (!empty($delivery)) {
-        $txt .= "Доставка: <b>$delivery</b><br>";
+        $txt .= "— 🚚 Доставка: *$delivery* ";
     }
+
+    if ($method == "total") $method = "Полная цена";
+    else $method = "Сдать старый";
 
     if (!empty($method)) {
-        $txt .= "Способ: <b>$method</b>";
+        $txt .= "— 🛠 Способ: *$method* ";
     }
 
-    fopen("https://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&parse_mode=html&text={$txt}","r");
+    file_get_contents("https://api.telegram.org/bot$token/sendMessage?chat_id=$chat_id&parse_mode=markdown&text=$txt");
 
     $query = mysqli_query($con, "INSERT INTO orders (name, phone, battery, payment, delivery, method) VALUES ('$name','$phone','$battery','$payment','$delivery','$method')");
 

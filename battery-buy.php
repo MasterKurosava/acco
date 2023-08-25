@@ -10,7 +10,7 @@ include 'config.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аккумулятор орталығы</title>
+    <title>Аккумулятор Орталығы</title>
     <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -40,7 +40,7 @@ if(isset($_GET['buy'])){
                     </div>
                     
                     <div class="form-element">
-                        <input type="text" name="name" class="input w-100" placeholder="ФИО" required/>
+                        <input type="text" name="name" class="input w-100" placeholder="Имя" required/>
                     </div>
                 
                     <div class="form-element">
@@ -51,6 +51,7 @@ if(isset($_GET['buy'])){
                         <select name="payment" class="input w-100" required>
                             <option value="" selected disabled>Способ оплаты</option>
                             <option value="cash">Наличные</option>
+                            <option value="kaspi">Kaspi перевод</option>
                             <option value="card">Банковская карта</option>
                         </select>
                     </div>

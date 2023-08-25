@@ -67,14 +67,14 @@ if(isset($message)){
         <section class="display-product-table">
             <table>
                 <thead>
-                    <th>имя</th>
-                    <th>номер</th>
-                    <th>аккумулятор</th>
-                    <th>оплата</th>
-                    <th>доставка</th>
-                    <th>метод</th>
-                    <th>время добавления</th>
-                    <th>действие</th>
+                    <th>Имя</th>
+                    <th>Номер</th>
+                    <th>Аккумулятор</th>
+                    <th>Оплата</th>
+                    <th>Доставка</th>
+                    <th>Метод</th>
+                    <th>Время добавления</th>
+                    <th></th>
                 </thead>
                 
                 <tbody>
@@ -86,7 +86,7 @@ if(isset($message)){
                     ?>
                     <tr>
                         <td><?php echo $row['name']; ?></td>
-                        <td><?php echo $row['phone']; ?></td>
+                        <td><a style="text-decoration: none" href="tel: <?php echo $row['phone']; ?>"><?php echo $row['phone']; ?></a></td>
                         <td><?php echo $row['battery']; ?></td>
                         <td><?php echo $row['payment']; ?></td>
                         <td><?php echo $row['delivery']; ?></td>
