@@ -177,6 +177,7 @@ a.logo img {
 .popup .close-btn {
   z-index: 1001;
   position:absolute;
+
   top:23px;
   right:23px;
   width:15px;

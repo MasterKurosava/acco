@@ -198,7 +198,7 @@ if(isset($message)){
             </table>
         </section>
 		
-		<section class="popup">
+		<section class="popup" style="padding: 0; width: 360px; border-radius: 15px;">
         <?php
         if(isset($_GET['edit'])){
             $edit_id = $_GET['edit'];
@@ -219,26 +219,32 @@ if(isset($message)){
             </div>
 
             <div class="form-element">
+            <label style="font-size: 1.5rem;">Название</label>
             <input type="text" class="input-edit" required name="update_p_name" value="<?php echo $fetch_edit['name']; ?>">
-            </div>
+            </div> 
 
             <div class="form-element">
+            <label style="font-size: 1.5rem;">Цена</label>
             <input type="text" class="input-edit" required name="update_p_total_price" value="<?php echo $fetch_edit['total_price']; ?>">
             </div>
 
             <div class="form-element">
+            <label style="font-size: 1.5rem;">Цена со скидкой</label>
             <input type="text" class="input-edit" required name="update_p_discount_price" value="<?php echo $fetch_edit['discount_price']; ?>">
             </div>
 
             <div class="form-element">
+            <label style="font-size: 1.5rem;">Пусковой ток</label>
             <input type="text" class="input-edit" required name="update_p_current" value="<?php echo $fetch_edit['current']; ?>">
             </div>
 
             <div class="form-element">
+            <label style="font-size: 1.5rem;">Страна производитель</label>
             <input type="text" class="input-edit" required name="update_p_country" value="<?php echo $fetch_edit['country']; ?>">
             </div>
 
             <div class="form-element">
+            <label style="font-size: 1.5rem;">Гарантия</label>
             <input type="text" class="input-edit" required name="update_p_warranty" value="<?php echo $fetch_edit['warranty']; ?>">
             </div>
 
@@ -248,12 +254,14 @@ if(isset($message)){
             </div>
 
             <div class="form-element">
-            <label style="font-size: 1.5rem;">Аккумулятор</label>
+            <label style="font-size: 1.5rem;">Фото</label>
             <input type="file" class="input-edit" required name="update_p_image" accept="image/png, image/jpg, image/jpeg">
             </div>
             
-            <input type="submit" value="изменить" name="update_product" class="btn">
-            <button class="btn" onclick="history.back()">отмена</button>
+            <div style="display:flex; flex-direction: row">
+                <input type="submit" value="изменить" name="update_product" class="btn" style="margin-right: 5px; background-color: blue; border-radius: 15px;">
+                <button class="btn" style="background-color: grey; border-radius: 15px;" onclick="history.back()">отмена</button>
+            </div>
             </div>
         </form>
 

@@ -123,10 +123,6 @@ section{
     color:var(--black);
  }
  
- .display-product-table table td:first-child{
-    padding:0;
- }
- 
  .display-product-table table tr:nth-child(even){
     background-color: var(--bg-color);
  }
@@ -158,7 +154,7 @@ section{
    color: black;
    font-size: 1.5rem;
    letter-spacing: 0.5px;
-   border-radius: 25px;
+   border-radius: 6px;
    transition: 0.3s;
    width: 100%;
  }

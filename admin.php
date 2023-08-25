@@ -21,7 +21,7 @@
     <header class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-              <a class="navbar-brand" href="https://akk-o.kz/"><img src="images/logo.png" class="logo" alt=""></a>
+              <a class="navbar-brand logo" href="https://akk-o.kz/"><img src="images/logo.png" class="logo" alt=""></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
@@ -35,12 +35,12 @@
       </nav>
     </header>
 
-    <div class="mt-5 admin">
+    <div class="mt-5 mb-5 admin">
       <a href="battery-admin.php"><button type="button" class="btn bat-button w-75">Аккумуляторы</button></a>
       <br><br>
       <a href="sale-admin.php"><button type="button" class="btn bat-button w-75">Скидки</button></a>
       <br><br>
-	  <a href="order-admin.php"><button type="button" class="btn bat-button w-75">Заказы</button></a>
+	    <a href="order-admin.php"><button type="button" class="btn bat-button w-75">Заказы</button></a>
       <br><br>
       <a href="login/logout.php"><button type="button" class="btn bat-button w-75" >Выйти</button></a>
     </div>

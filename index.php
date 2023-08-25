@@ -67,7 +67,7 @@ include 'config.php';
                             <p class="subtext">вместе с нами экспертами</p>
                         </div>
                         <div class="col-md-5 carousel-form">
-                            <form action="form.php" method="post" class="form">
+                            <form action="form.php" method="post" class="form" style=" border: 3px solid #007af8;">
                                 <div class="input-container">
                                     <input type="text" name="name" class="input w-100" placeholder="ФИО" required/>
                                 </div>
