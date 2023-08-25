@@ -63,8 +63,8 @@ include 'config.php';
 				<div class="carousel-item active left-item p-2">
                     <div class="d-flex row p-5">
                         <div class="col-md-7 left-content">
-                            <h2 class="title">Выберите <span>идеальный</span> аккумулятор</h2>
-                            <p class="subtext">вместе с нами экспертами</p>
+                            <h2 class="title" style="color: #111">Выберите <div style="color: #007af8; display: inline;">идеальный</div> аккумулятор</h2>
+                            <p class="subtext">вместе с нашими экспертами</p>
                         </div>
                         <div class="col-md-5 carousel-form">
                             <form action="form.php" method="post" class="form" style=" border: 3px solid #007af8;">
@@ -103,8 +103,10 @@ include 'config.php';
                         </div>
                         <div class="col-md-7 orta-text">
                             <h2 class="title">Аккумулятор орталығы</h1>
-                            <p>
-                            Аккумуляторный центр "Астана" предлагает автомобильные масла и маслянные фильтры. Мы гарантируем быструю доставку, выезд, зарядку, проверку плотности и установку аккумуляторов с качественным сервисом.
+                            <p style="max-width: 600px">
+                            Аккумуляторный центр "Астана" предлагает автомобильные масла и маслянные фильтры. 
+                            Мы гарантируем быструю доставку, выезд, зарядку, проверку плотности и установку 
+                            аккумуляторов с качественным сервисом.
                             </p>
                         </div>
                     </div>
@@ -123,10 +125,6 @@ include 'config.php';
 		
 		<div class="text-center mt-3">
             <img src="images/ad.jpg" style="width: 100%; border-radius: 20px;">
-        </div>
-		
-		<div class="text-center mt-3">
-            <img src="images/prepare.png" style="width: 100%; border-radius: 15px;">
         </div>
 		
     </header>

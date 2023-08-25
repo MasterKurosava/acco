@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
+  <body style="height: 100vh">
 
     <header class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -36,13 +36,13 @@
     </header>
 
     <div class="mt-5 mb-5 admin">
-      <a href="battery-admin.php"><button type="button" class="btn bat-button w-75">Аккумуляторы</button></a>
+      <a href="battery-admin.php"><button type="button" class="btn bat-button w-75" style="background-color: #007af8; border: 1px solid #007af8; border-radius: 8px;">Аккумуляторы</button></a>
       <br><br>
-      <a href="sale-admin.php"><button type="button" class="btn bat-button w-75">Скидки</button></a>
+      <a href="sale-admin.php"><button type="button" class="btn bat-button w-75" style="background-color: #007af8; border: 1px solid #007af8; border-radius: 8px;">Скидки</button></a>
       <br><br>
-	    <a href="order-admin.php"><button type="button" class="btn bat-button w-75">Заказы</button></a>
+	    <a href="order-admin.php"><button type="button" class="btn bat-button w-75" style="background-color: #007af8; border: 1px solid #007af8; border-radius: 8px;">Заказы</button></a>
       <br><br>
-      <a href="login/logout.php"><button type="button" class="btn bat-button w-75" >Выйти</button></a>
+      <a href="login/logout.php"><button type="button" class="btn bat-button w-75" style="background-color: #007af8; border: 1px solid #007af8; border-radius: 8px;">Выйти</button></a>
     </div>
 
 
