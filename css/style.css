@@ -628,4 +628,121 @@ a.logo img {
 
 .btn:hover {
   background-color: white;
+
+.buy-modal .modal-content{
+  margin-top: 10%;
+}
+.buy-modal{
+  border-radius: 20px;
+  width: fit-content;
+  margin: 0 auto!important;
+}
+
+.modal-content{
+  /* border: 1px solid #007af8!important; */
+}
+
+@media (min-width: 576px){
+  .modal-dialog {
+      max-width:100vw!important;
+      margin: 1.75rem auto;
+  }
+}
+.buy-modal .modal-header{
+  text-align: center;
+}
+.buy-modal .modal-header button{
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.buy-modal .modal-header button span{
+  font-size: 30px;
+  color: rgb(61, 61, 61);
+}
+
+.modal-left{
+  padding: 20px 40px;
+}
+.modal-body{
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-body .image-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.modal-body .image-container img{
+  max-width: 200px;
+  width: 100%;
+  height: fit-content;
+}
+.modal-name{
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.modal-amper{
+  font-size: 14px;
+  color: rgb(80, 80, 80);
+}
+.modal-price{
+  font-size: 22px;
+  color: black;
+}
+.modal-right form{
+  /* border: 1px solid rgb(80, 80, 80); */
+  border-radius: 15px;
+  padding: 10px 20px;
+  
+}
+.modal-right label{
+  color: rgb(61, 61, 61);
+  font-weight: 300;
+  font-size: 14px;
+}
+.modal-right .form-group{
+  margin: 10px 0;
+}
+.modal-right select, .modal-right input{
+  border: none;
+  border-bottom: 1px solid #007af8 !important;
+}
+.modal-right input{
+  font-size: 15px;
+}
+
+.modal-right option{
+  font-size: 15px;
+  font-weight: normal;
+  color: rgb(61, 61, 61);
+  padding: 10px 5px;
+}
+#buyModal{
+  padding-right: 0!important;
+}
+
+.modal-footer .close{
+  cursor: pointer;
+  background-color: transparent;
+  color:rgb(61, 61, 61);
+  border: 1px solid rgb(61, 61, 61);
+  border-radius: 8px;
+}
+
+.modal-footer .send{
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #0029a2, #008afc, #012aa4);
+  background-size: 200% 200%;
+  animation: gradientShift 5s infinite;
 }

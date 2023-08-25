@@ -197,9 +197,18 @@ include 'config.php';
 
                         </div>
                         <div class="card-footer bat-card-footer">
-                            <a href="battery-buy.php?buy=<?php echo $fetch_product['id']; ?>">
+                            <button type="button" class="btn btn-primary card-button" data-toggle="modal" data-target="#buyModal" name="buy" 
+                                data-product-name="<?php echo $fetch_product['name']; ?>" 
+                                data-discount-price="<?php echo $fetch_product['discount_price']; ?>" 
+                                data-total-price="<?php echo $fetch_product['total_price']; ?>" 
+                                data-tok="<?php echo $fetch_product['current']; ?>"
+                                data-product-id="<?php echo $fetch_product['id']; ?>">
+                                Открыть форму
+                            </button>
+
+                            <!-- <a href="battery-buy.php?buy=<?php echo $fetch_product['id']; ?>">
 								<button class="btn bat-button card-button" name="buy">Купить >></button>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
@@ -292,11 +301,80 @@ include 'config.php';
         
     </main>
 
+
+<!-- Modal -->
+<div class="modal fade" id="buyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog buy-modal" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Оформление заявки</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body row">
+            <div class="col-md-6 modal-left">
+                <div class="image-container">
+                    <img src="batteries/inci60.jpg">
+                    <p class="modal-name">Bars 100</p>
+                    <p class="modal-amper">800 A</p>
+                    <p class="modal-price">48 000 тг</p>
+                </div>
+            </div>
+            <div class="col-md-6 modal-right">
+                <form action="order.php" method="post" id="orderForm">
+                    <input type="hidden" name="name" class="form-control" id="battery">
+                    <div class="form-group name-group">
+                        <label for="userName">Имя:</label>
+                        <input type="text" name="name" class="form-control" id="userName" placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group phone-group">
+                        <label for="userPhone">Телефон:</label>
+                        <input type="tel" name="phone" class="form-control" id="userPhone" placeholder="Введите ваш номер телефона">
+                    </div>
+                    <div class="form-group pay-group">
+                        <label for="paymentMethod">Выбор оплаты:</label>
+                        <select class="form-control" id="paymentMethod" name="payment">
+                            <option>Наличными</option>
+                            <option>Банковская карта</option>
+                        </select>
+                    </div>
+                    <div class="form-group delivery-group">
+                        <label for="deliveryMethod">Способ доставки:</label>
+                        <select class="form-control" id="deliveryMethod" name="delivery">
+                            <option>Курьер</option>
+                            <option>Самовывоз</option>
+                        </select>
+                    </div>
+                    <div class="form-group discount-group">
+                        <label for="oldBatteryDiscount">Получить скидку за старый АКБ:</label>
+                        <select class="form-control" id="oldBatteryDiscount" name="method">
+                            <option>Да</option>
+                            <option>Нет</option>
+                        </select>
+                    </div>
+                </form>
+             </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close" data-dismiss="modal">Закрыть</button>
+            <button type="submit" class="btn btn-primary send" id="submitButton">Отправить</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+
     <footer class="text-center mt-5">
         <p>© 2021-2023 Аккумулятор Орталығы, Казахстан. Все права защищены.</p>
     </footer>
     
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/modal.js"></script>
+
+
     
 </body>
 
