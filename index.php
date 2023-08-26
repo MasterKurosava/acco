@@ -67,7 +67,7 @@ include 'config.php';
                             <p class="subtext">вместе с нашими экспертами</p>
                         </div>
                         <div class="col-md-5 carousel-form">
-                            <form action="form.php" method="post" class="form" style=" border: 3px solid #007af8;">
+                            <form action="form.php" method="post"class="form" style=" border: 3px solid #007af8;">
                                 <div class="input-container">
                                     <input type="text" name="name" class="input w-100" placeholder="ФИО" required/>
                                 </div>
@@ -171,7 +171,7 @@ include 'config.php';
                         while($fetch_product = mysqli_fetch_assoc($select_batteries)){
                 ?>
 
-                <div class="col">
+                <div class="col battery-col">
                     <div class="shadow card bat-card h-100">
                         <div class="card-image-container">
                             <img src="batteries/<?php echo $fetch_product['image']; ?>" class="battery">
@@ -324,7 +324,8 @@ include 'config.php';
             </div>
             <div class="col-md-6 modal-right">
                 <form action="order.php" method="post" id="orderForm">
-                    <input type="hidden" name="name" class="form-control" id="battery">
+                    <input type="hidden" name="battery" class="form-control" id="battery">
+                    <input type="hidden" name="order" id="order">
                     <div class="form-group name-group">
                         <label for="userName">Имя:</label>
                         <input type="text" name="name" class="form-control" id="userName" placeholder="Введите ваше имя">
@@ -338,6 +339,7 @@ include 'config.php';
                         <select class="form-control" id="paymentMethod" name="payment">
                             <option>Наличными</option>
                             <option>Банковская карта</option>
+                            <option>Каспи</option>
                         </select>
                     </div>
                     <div class="form-group delivery-group">
@@ -359,7 +361,7 @@ include 'config.php';
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary close" data-dismiss="modal">Закрыть</button>
-            <button type="submit" class="btn btn-primary send" id="submitButton">Отправить</button>
+            <button type="submit" class="btn btn-primary send" id="submitButton" >Отправить</button>
         </div>
     </div>
   </div>

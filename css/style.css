@@ -897,3 +897,7 @@ a.logo img {
 html {
   scroll-behavior: smooth;
 }
+
+.card{
+  border-radius: 15px!important;
+}

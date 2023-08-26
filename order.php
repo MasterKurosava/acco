@@ -25,23 +25,14 @@ if (isset($_POST['order']))
         $txt .= "— 🔋 Аккумулятор: *$battery* ";
     }
 
-    if ($payment == "cash") $payment = "Наличными";
-    else if ($payment == "kaspi") $payment = "Переводом";
-    else $payment = "Картой";
-
     if (!empty($payment)) {
         $txt .= "— 💳 Оплата: *$payment* ";
     }
 
-    if ($delivery == "delivery") $delivery = "Да";
-    else $delivery = "Самовывоз";
 
     if (!empty($delivery)) {
         $txt .= "— 🚚 Доставка: *$delivery* ";
     }
-
-    if ($method == "total") $method = "Полная цена";
-    else $method = "Сдать старый";
 
     if (!empty($method)) {
         $txt .= "— 🛠 Способ: *$method* ";
