@@ -893,3 +893,7 @@ a.logo img {
   opacity: 1;
   pointer-events: auto;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -202,6 +202,7 @@ include 'config.php';
                                 data-discount-price="<?php echo $fetch_product['discount_price']; ?>" 
                                 data-total-price="<?php echo $fetch_product['total_price']; ?>" 
                                 data-tok="<?php echo $fetch_product['current']; ?>"
+                                data-product-img="<?php echo $fetch_product['image']; ?>"
                                 data-product-id="<?php echo $fetch_product['id']; ?>">
                                 Открыть форму
                             </button>
@@ -315,7 +316,7 @@ include 'config.php';
         <div class="modal-body row">
             <div class="col-md-6 modal-left">
                 <div class="image-container">
-                    <img src="batteries/inci60.jpg">
+                    <img class="battery-image" src="batteries/inci60.jpg">
                     <p class="modal-name">Bars 100</p>
                     <p class="modal-amper">800 A</p>
                     <p class="modal-price">48 000 тг</p>
@@ -396,25 +397,15 @@ include 'config.php';
         }
     }
 
-    function scrollToTop(scrollDuration) {
-        const scrollHeight = window.scrollY,
-            scrollStep = Math.PI / ( scrollDuration / 15 ),
-            cosParameter = scrollHeight / 2;
-        let scrollCount = 0,
-            scrollMargin;
-
-        requestAnimationFrame(step);
-        function step () {
-            setTimeout(function() {
-                if ( window.scrollY !== 0 ) {
-                    requestAnimationFrame(step);
-                    scrollCount = scrollCount + 1;  
-                    scrollMargin = cosParameter - cosParameter * Math.cos( scrollCount * scrollStep );
-                    window.scrollTo( 0, ( scrollHeight - scrollMargin ) );
-                }
-            }, 15 );
-        }
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
+
+    // Обработчик события для кнопки
+    button.onclick = scrollToTop;
 </script>
 
     

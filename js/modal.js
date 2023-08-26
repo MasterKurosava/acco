@@ -5,6 +5,7 @@ $(document).ready(function(){
         var discountPrice = button.data('discount-price');
         var totalPrice = button.data('total-price');
         var tokValue = button.data('tok');
+        var image = button.data('product-img');
         var productId = button.data('product-id'); // Если нужно
 
         // Заполняем модальное окно данными
@@ -13,6 +14,8 @@ $(document).ready(function(){
         modal.find('.modal-amper').text(tokValue+"A");
         modal.find('.modal-price').text(discountPrice+" тг");
         modal.find('#battery').val(productName);
+        modal.find('#battery').val(productName);
+        modal.find(".battery-image").attr("src", "batteries/"+image);
 
         $('#oldBatteryDiscount').on('change', function(){
             if ($(this).val() === 'Да') {
